@@ -5,7 +5,7 @@ exports.help = (message) => {
 
 			title: 'Help menu',
 			description:
-				'these are all the comands that I know. I am still new so if I make any mistakes please let my creator know!',
+				'These are all the comands that I know. I am still new so if I make any mistakes please let my creator know!',
 			fields: [
 				{
 					name: 'Play songs',
@@ -41,7 +41,7 @@ exports.help = (message) => {
 					value: 'Feature comming soon',
 				},
 				{
-					name: 'rename playlist',
+					name: 'Rename playlist',
 					value: 'Feature comming soon',
 				},
 			],

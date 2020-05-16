@@ -20,7 +20,13 @@ exports.play = async (message) => {
 	try {
 		songInfo = await ytdl.getInfo(args[1]);
 	} catch (error) {
-		message.reply('Please check the URL and try again!');
+		message.reply({
+			embed: {
+				color: 3447003,
+				description:
+					'Please make sure the URL is correct or run `+help` to see available commands',
+			},
+		});
 	}
 	const song = {
 		title: songInfo.title,
