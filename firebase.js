@@ -7,5 +7,6 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-//! the format for the db is: playlists - auto ID - title - songs[] - url
+//! the format for the db is: playlists - title - songs[] - url
+//! remember to check if playlist namae already exist when creatin new playlist
 exports.playlists = db.collection('playlists');
