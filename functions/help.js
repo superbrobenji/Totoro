@@ -10,35 +10,35 @@ exports.help = (message) => {
 				{
 					name: 'Play songs',
 					value:
-						'`+play <song URL>` - replace `<song URL>` with the youtube url of the song you would like to play.',
+						'`+play <song URL>` - Replace `<song URL>` with the youtube url of the song you would like to play.',
 				},
 				{
 					name: 'Skip songs',
-					value: '`+skip` - this will skip the currently playing song',
+					value: '`+skip` - This will skip the currently playing song',
 				},
 				{
-					name: 'stop totoro',
-					value: '`+stop` this will stop totoro from playing songs.',
+					name: 'Stop totoro',
+					value: '`+stop` - This will stop totoro from playing songs.',
 				},
 				{
-					name: 'view playlists',
-					value: 'feature comming soon',
+					name: 'View playlists',
+					value: 'Feature comming soon',
 				},
 				{
-					name: 'create playlist',
-					value: 'feature comming soon',
+					name: 'Create playlist',
+					value: 'Feature comming soon',
 				},
 				{
-					name: 'play playlist',
-					value: 'feature comming soon',
+					name: 'Play playlist',
+					value: 'Feature comming soon',
 				},
 				{
-					name: 'delete playlist',
-					value: 'feature comming soon',
+					name: 'Delete playlist',
+					value: 'Feature comming soon',
 				},
 				{
-					name: 'add to playlist',
-					value: 'feature comming soon',
+					name: 'Add to playlist',
+					value: 'Feature comming soon',
 				},
 			],
 			timestamp: new Date(),
