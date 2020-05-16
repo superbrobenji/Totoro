@@ -40,6 +40,10 @@ exports.help = (message) => {
 					name: 'Add to playlist',
 					value: 'Feature comming soon',
 				},
+				{
+					name: 'rename playlist',
+					value: 'Feature comming soon',
+				},
 			],
 			timestamp: new Date(),
 		},
