@@ -9,7 +9,7 @@ exports.deletePlaylist = async (message) => {
 
 	let getPlaylist = playlistRef.get().then((doc) => {
 		if (!doc.exists) {
-			message.reply('The playlist does not exists!');
+			message.reply('The playlist does not exist!');
 		} else {
 			playlistRef.delete();
 			message.reply('The playlist is deleted!');
