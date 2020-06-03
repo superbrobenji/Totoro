@@ -33,7 +33,7 @@ exports.help = (message) => {
 				},
 				{
 					name: 'Play playlist',
-					value: 'Feature comming soon',
+					value: '`++playplaylist <playlist name>` - this will play a playlist',
 				},
 				{
 					name: 'Delete playlist',

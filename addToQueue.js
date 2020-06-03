@@ -17,6 +17,9 @@ exports.play = async (message) => {
 		);
 	}
 	let songInfo;
+	if (!args[1]) {
+		return message.channel.send('You must provide a URL!').catch(console.error);
+	}
 	try {
 		songInfo = await ytdl.getInfo(args[1]);
 	} catch (error) {
@@ -29,8 +32,8 @@ exports.play = async (message) => {
 		});
 	}
 	const song = {
-		title: songInfo.title,
-		url: songInfo.video_url,
+		title: songInfo.videoDetails.title,
+		url: songInfo.videoDetails.video_url,
 	};
 	const queueContruct = {
 		textChannel: message.channel,
