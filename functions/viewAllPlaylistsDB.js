@@ -25,7 +25,8 @@ exports.viewAllPlaylists = async (message) => {
 					color: 3447003,
 
 					title: 'Playlists',
-					description: 'All the palylists created',
+					description:
+						'All the palylists created. Still working on how to display this.',
 					fields: [out],
 					timestamp: new Date(),
 				},

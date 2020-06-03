@@ -12,7 +12,7 @@ exports.deletePlaylist = async (message) => {
 			message.reply('The playlist does not exist!');
 		} else {
 			playlistRef.delete();
-			message.reply('The playlist is deleted!');
+			message.reply('The playlist was deleted!');
 		}
 	});
 };

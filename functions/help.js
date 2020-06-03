@@ -47,7 +47,8 @@ exports.help = (message) => {
 				},
 				{
 					name: 'Delete song',
-					value: 'Feature comming soon',
+					value:
+						'`+deleteplaylist <playlist name> <song number>` - this will permanently delete a song',
 				},
 			],
 			timestamp: new Date(),
