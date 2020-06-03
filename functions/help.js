@@ -37,7 +37,8 @@ exports.help = (message) => {
 				},
 				{
 					name: 'Delete playlist',
-					value: 'Feature comming soon',
+					value:
+						'`+deleteplaylist <playlist name>` - this will permanently delete a playlist',
 				},
 				{
 					name: 'Add song to playlist',
@@ -45,7 +46,7 @@ exports.help = (message) => {
 						'`+addsong <playlist name> <song URL>` - this will add a song to a playlist playlist',
 				},
 				{
-					name: 'Rename playlist',
+					name: 'Delete song',
 					value: 'Feature comming soon',
 				},
 			],

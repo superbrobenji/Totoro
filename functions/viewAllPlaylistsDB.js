@@ -8,9 +8,11 @@ exports.viewAllPlaylists = async (message) => {
 			let out = [];
 			snap.docs.map((doc) => {
 				let songs = [];
+				let i = 0;
 				doc.data().songs.map((song) => {
 					//TODO format the songs listed.
-					songs.push(` ${song} `);
+					songs.push(` ${i} - ${song} `);
+					i++;
 				});
 				out.push({
 					name: doc.id,
