@@ -22,6 +22,14 @@ client.once('disconnect', () => {
 	console.log('Disconnect!');
 });
 
+client.on('guildMemberAdd', (guildMember) => {
+	guildMember.roles.add('703370768456614030');
+
+	client.channels.cache
+		.get('703360318461706240')
+		.send('Welcome to The server! I am your overlord and you shall obey me!');
+});
+
 client.on('message', async (message) => {
 	state.setServerQueue(state.getAQueue(message.guild.id));
 	if (message.author.bot) return;
