@@ -17,14 +17,23 @@ exports.play = async (message) => {
 		);
 	}
 	let songInfo;
+	if (!args[1]) {
+		return message.channel.send('You must provide a URL!').catch(console.error);
+	}
 	try {
 		songInfo = await ytdl.getInfo(args[1]);
 	} catch (error) {
-		message.reply('Please check the URL and try again!');
+		message.reply({
+			embed: {
+				color: 3447003,
+				description:
+					'Please make sure the URL is correct or run `+help` to see available commands',
+			},
+		});
 	}
 	const song = {
-		title: songInfo.title,
-		url: songInfo.video_url,
+		title: songInfo.videoDetails.title,
+		url: songInfo.videoDetails.video_url,
 	};
 	const queueContruct = {
 		textChannel: message.channel,

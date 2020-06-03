@@ -7,5 +7,9 @@ exports.skip = (message) => {
 		);
 	if (!state.getServerQueue() || state.getServerQueue() === null)
 		return message.channel.send('There is no song that I could skip!');
-	state.getServerQueue().connection.dispatcher.end();
+	try {
+		state.getServerQueue().connection.dispatcher.end();
+	} catch (err) {
+		console.error(err);
+	}
 };
