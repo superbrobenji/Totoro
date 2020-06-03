@@ -1,4 +1,4 @@
-const create = require('../functions/createPlaylistDB');
+const addSong = require('../functions/addSongDB');
 module.exports = {
 	name: 'newplaylist',
 	description: 'creates a playlist!',

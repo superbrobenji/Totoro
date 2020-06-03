@@ -40,8 +40,9 @@ exports.help = (message) => {
 					value: 'Feature comming soon',
 				},
 				{
-					name: 'Add to playlist',
-					value: 'Feature comming soon',
+					name: 'Add song to playlist',
+					value:
+						'`+addsong <playlist name> <song URL>` - this will add a song to a playlist playlist',
 				},
 				{
 					name: 'Rename playlist',
