@@ -8,5 +8,9 @@ exports.stop = (message) => {
 	let newSQ = state.getServerQueue();
 	newSQ.songs = [];
 	state.setServerQueue(newSQ);
-	state.getServerQueue().connection.dispatcher.end();
+	try {
+		state.getServerQueue().connection.dispatcher.end();
+	} catch (err) {
+		console.error(err);
+	}
 };

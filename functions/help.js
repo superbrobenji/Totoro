@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 exports.help = (message) => {
 	return message.channel.send({
 		embed: {
@@ -22,11 +24,12 @@ exports.help = (message) => {
 				},
 				{
 					name: 'View playlists',
-					value: 'Feature comming soon',
+					value: '`+listplaylists` - lists all the created playlists',
 				},
 				{
 					name: 'Create playlist',
-					value: 'Feature comming soon',
+					value:
+						'`+newplaylist <playlist name>` - this will create an empty playlist',
 				},
 				{
 					name: 'Play playlist',
