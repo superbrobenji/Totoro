@@ -1,6 +1,6 @@
 const db = require('../firebase').guilds;
 exports.deleteSong = async (message) => {
-	const playlist = message.content.split(' ');
+	const playlist = message.content.split('"');
 
 	const playlistRef = db
 		.doc(message.guild.id)

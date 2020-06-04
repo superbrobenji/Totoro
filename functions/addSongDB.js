@@ -1,6 +1,6 @@
 const db = require('../firebase').guilds;
 exports.addsong = async (message) => {
-	const playlist = message.content.split(' ');
+	const playlist = message.content.split('"');
 	let data = { songs: [playlist[2]] };
 
 	const playlistRef = db

@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const state = require('../state');
 
 exports.play = async (message) => {
-	const playlistName = message.content.split(' ');
+	const playlistName = message.content.split('"');
 
 	const playlistRef = db
 		.doc(message.guild.id)
@@ -16,7 +16,8 @@ exports.play = async (message) => {
 			message.reply('The playlist does not exist!');
 		} else {
 			doc.data().songs.map(async (songPlaylist) => {
-				//!copied code!
+				//!This is stupid, I know this is stupid
+				//TODO don't print queueing for every song just list the amount
 
 				const voiceChannel = message.member.voice.channel;
 				if (!voiceChannel)

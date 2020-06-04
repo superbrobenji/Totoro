@@ -29,26 +29,27 @@ exports.help = (message) => {
 				{
 					name: 'Create playlist',
 					value:
-						'`+newplaylist <playlist name>` - this will create an empty playlist',
+						'`+newplaylist "playlist name"` - this will create an empty playlist. Include the ""!',
 				},
 				{
 					name: 'Play playlist',
-					value: '`++playplaylist <playlist name>` - this will play a playlist',
+					value:
+						'`+playplaylist "playlist name"` - this will play a playlist.  Include the ""!',
 				},
 				{
 					name: 'Delete playlist',
 					value:
-						'`+deleteplaylist <playlist name>` - this will permanently delete a playlist',
+						'`+deleteplaylist "playlist name"` - this will permanently delete a playlist. Include the ""!',
 				},
 				{
 					name: 'Add song to playlist',
 					value:
-						'`+addsong <playlist name> <song URL>` - this will add a song to a playlist playlist',
+						'`+addsong "playlist name" <song URL>` - this will add a song to a playlist playlist. Include the ""!',
 				},
 				{
 					name: 'Delete song',
 					value:
-						'`+deleteplaylist <playlist name> <song number>` - this will permanently delete a song',
+						'`+deleteplaylist "playlist name" <song number>` - this will permanently delete a song. Include the ""!',
 				},
 			],
 			timestamp: new Date(),

@@ -1,6 +1,6 @@
 const db = require('../firebase').guilds;
 exports.createP = async (message) => {
-	const playlistName = message.content.split(' ');
+	const playlistName = message.content.split('"');
 	const data = {
 		songs: [],
 	};
