@@ -18,6 +18,8 @@ exports.play = async (message) => {
 			doc.data().songs.map(async (songPlaylist) => {
 				//!This is stupid, I know this is stupid
 				//TODO don't print queueing for every song just list the amount
+				//? should I read from db on every song play to make playlist size dynamic?
+				//TODO completely redo this. it can't handle multiple downloads at once.
 
 				const voiceChannel = message.member.voice.channel;
 				if (!voiceChannel)
@@ -36,8 +38,9 @@ exports.play = async (message) => {
 						.send('You must provide a URL!')
 						.catch(console.error);
 				}
+				const songurl = songPlaylist.split(' ');
 				try {
-					songInfo = await ytdl.getInfo(songPlaylist);
+					songInfo = await ytdl.getInfo(songurl[1]);
 				} catch (error) {
 					message.reply({
 						embed: {
@@ -48,8 +51,8 @@ exports.play = async (message) => {
 					});
 				}
 				const song = {
-					title: songInfo.title,
-					url: songInfo.video_url,
+					title: songInfo.videoDetails.title,
+					url: songInfo.videoDetails.video_url,
 				};
 				const queueContruct = {
 					textChannel: message.channel,

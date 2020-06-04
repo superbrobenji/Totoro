@@ -3,6 +3,8 @@ const state = require('./state');
 const play = require('./functions/play');
 
 exports.play = async (message) => {
+	//! needs a serious overlook and optimisations especially with handling multiple loads at a time
+
 	const args = message.content.split(' ');
 
 	const voiceChannel = message.member.voice.channel;
